@@ -1,4 +1,4 @@
-# RKKA-G Robot Path Planning di Grid dengan Rintangan
+# KKA-G Robot Path Planning di Grid dengan Rintangan
 
 _Dibuat untuk menyelesaikan tugas KKA mengenai pembandingkan metode untuk menyelesaikan suatu kasus, menggunakan A* dan IDA*._
 
