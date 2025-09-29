@@ -4,9 +4,6 @@ import heapq
 import time
 from IPython.display import clear_output
 
-# -------------------------------
-# 1. Definisi Grid
-# -------------------------------
 grid = np.array([
     [0, 0, 0, 1, 0],
     [0, 1, 0, 1, 0],
@@ -18,9 +15,6 @@ grid = np.array([
 start = (0,0)
 goal = (4,4)
 
-# -------------------------------
-# 2. Fungsi Visualisasi
-# -------------------------------
 def plot_step(grid, path=[], current=None):
     plt.figure(figsize=(5,5))
     for i in range(grid.shape[0]):
@@ -43,9 +37,6 @@ def plot_step(grid, path=[], current=None):
     time.sleep(0.2)
     clear_output(wait=True)
 
-# -------------------------------
-# 3. Algoritma A*
-# -------------------------------
 def astar_visual(grid,start,goal):
     def heuristic(a,b):
         return abs(a[0]-b[0])+abs(a[1]-b[1])
@@ -76,9 +67,6 @@ def astar_visual(grid,start,goal):
                 heapq.heappush(open_list,(g+1+heuristic((nx,ny),goal),g+1,(nx,ny),path+[(nx,ny)]))
     return None,iterations,time.time()-start_time
 
-# -------------------------------
-# 4. Menjalankan A*
-# -------------------------------
 print("Menjalankan A*...")
 astar_path,astar_iter,astar_time=astar_visual(grid,start,goal)
 print("A* selesai. Path:",astar_path)
